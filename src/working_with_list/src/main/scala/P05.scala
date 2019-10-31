@@ -10,5 +10,17 @@ object P05 {
     }
   }
 
+  def reverseRecursiveOnlyTail[T](list: List[T]): List[T] = {
+    def tailRecursive[T](result: List[T], list: List[T]): List[T] = {
+      list match {
+        case Nil => result
+        case x :: tail => tailRecursive(x :: result , tail)
+      }
+    }
+
+    tailRecursive(Nil:List[T],list)
+
+  }
+
 
 }
