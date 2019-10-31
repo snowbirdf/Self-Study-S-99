@@ -1,2 +1,8 @@
 *.class
 *.log
+
+#sbt
+target/
+
+# IntelliJ
+.idea/
