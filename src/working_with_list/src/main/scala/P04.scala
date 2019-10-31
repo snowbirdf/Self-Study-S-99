@@ -19,4 +19,8 @@ object P04 {
 
     tailRecursive(0, list)
   }
+
+  def lengthFoldLeft[T](list: List[T]): Int = {
+    list.foldLeft(0)((result, _) => result + 1)
+  }
 }
