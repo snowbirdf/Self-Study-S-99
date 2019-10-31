@@ -14,7 +14,6 @@ object P04 {
   def lengthTailRecursive[T](list :List[T]):Int = {
     def tailRecursive(result: Int, list:List[T]): Int = list match {
       case Nil => result
-      case _ :: Nil => result + 1
       case _ :: tail => tailRecursive(result + 1, tail)
     }
 
